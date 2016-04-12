@@ -1,0 +1,179 @@
+sp {sudoku*propose*initialize-sudoku
+   (state <s> ^superstate nil
+             -^name)
+--> 
+   (<s> ^operator <o> +)
+   (<o> ^name initialize-sudoku)
+}
+
+
+sp {sudoku*apply*initialize-sudoku
+   (state <s> ^operator <op>)
+   (<op> ^name initialize-sudoku)
+-->
+   (<s> ^name sudoku
+        ^box <b1> 
+        ^box <b2> 
+        ^box <b3> 
+        ^box <b4> 
+        ^box <b5> 
+        ^box <b6> 
+        ^box <b7> 
+        ^box <b8> 
+        ^box <b9> 
+        ^box <b10> 
+        ^box <b11> 
+        ^box <b12> 
+        ^box <b13> 
+        ^box <b14> 
+        ^box <b15> 
+        ^box <b16>
+        ^box <b17> 
+        ^box <b18> 
+        ^box <b19> 
+        ^box <b20> 
+        ^box <b21> 
+        ^box <b22> 
+        ^box <b23> 
+        ^box <b24> 
+        ^box <b25> 
+        ^box <b26> 
+        ^box <b27> 
+        ^box <b28> 
+        ^box <b29> 
+        ^box <b30> 
+        ^box <b31> 
+        ^box <b32>
+        ^box <b33> 
+        ^box <b34> 
+        ^box <b35> 
+        ^box <b36> 
+        ^box <b37> 
+        ^box <b38> 
+        ^box <b39> 
+        ^box <b40> 
+        ^box <b41> 
+        ^box <b42> 
+        ^box <b43> 
+        ^box <b44> 
+        ^box <b45> 
+        ^box <b46> 
+        ^box <b47> 
+        ^box <b48>
+        ^box <b49> 
+        ^box <b50> 
+        ^box <b51> 
+        ^box <b52> 
+        ^box <b53> 
+        ^box <b54> 
+        ^box <b55> 
+        ^box <b56> 
+        ^box <b57> 
+        ^box <b58> 
+        ^box <b59> 
+        ^box <b60> 
+        ^box <b61> 
+        ^box <b62> 
+        ^box <b63> 
+        ^box <b64>
+        ^box <b65> 
+        ^box <b66> 
+        ^box <b67> 
+        ^box <b68> 
+        ^box <b69> 
+        ^box <b70> 
+        ^box <b71> 
+        ^box <b72> 
+        ^box <b73> 
+        ^box <b74> 
+        ^box <b75> 
+        ^box <b76> 
+        ^box <b77> 
+        ^box <b78> 
+        ^box <b79> 
+        ^box <b80>
+        ^box <b81>  )
+  
+(<b1> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 1 ^j 1 ^blki 1 ^blkj 1)
+(<b2> ^value 7 ^i 1 ^j 2 ^blki 1 ^blkj 1)
+(<b3> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 1 ^j 3 ^blki 1 ^blkj 1)
+(<b4> ^value 8 ^i 2 ^j 1 ^blki 1 ^blkj 1)
+(<b5> ^value 1 ^i 2 ^j 2 ^blki 1 ^blkj 1)
+(<b6> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 2 ^j 3 ^blki 1 ^blkj 1)
+(<b7> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 3 ^j 1 ^blki 1 ^blkj 1)
+(<b8> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 3 ^j 2 ^blki 1 ^blkj 1)
+(<b9> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 3 ^j 3 ^blki 1 ^blkj 1)
+(<b10> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 1 ^j 4 ^blki 1 ^blkj 2)
+(<b11> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 1 ^j 5 ^blki 1 ^blkj 2)
+(<b12> ^value 5 ^i 1 ^j 6 ^blki 1 ^blkj 2)
+(<b13> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 2 ^j 4 ^blki 1 ^blkj 2)
+(<b14> ^value 6 ^i 2 ^j 5 ^blki 1 ^blkj 2)
+(<b15> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 2 ^j 6 ^blki 1 ^blkj 2)
+(<b16> ^value 4 ^i 3 ^j 4 ^blki 1 ^blkj 2)
+(<b17> ^value 8 ^i 3 ^j 5 ^blki 1 ^blkj 2)
+(<b18> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 3 ^j 6 ^blki 1 ^blkj 2)
+(<b19> ^value 2 ^i 1 ^j 7 ^blki 1 ^blkj 3)
+(<b20> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 1 ^j 8 ^blki 1 ^blkj 3)
+(<b21> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 1 ^j 9 ^blki 1 ^blkj 3)
+(<b22> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 2 ^j 7 ^blki 1 ^blkj 3)
+(<b23> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 2 ^j 8 ^blki 1 ^blkj 3)
+(<b24> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 2 ^j 9 ^blki 1 ^blkj 3)
+(<b25> ^value 7 ^i 3 ^j 7 ^blki 1 ^blkj 3)
+(<b26> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 3 ^j 8 ^blki 1 ^blkj 3)
+(<b27> ^value 1 ^i 3 ^j 9 ^blki 1 ^blkj 3)
+(<b28> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 4 ^j 1 ^blki 2 ^blkj 1)
+(<b29> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 4 ^j 2 ^blki 2 ^blkj 1)
+(<b30> ^value 1 ^i 4 ^j 3 ^blki 2 ^blkj 1)
+(<b31> ^value 3 ^i 5 ^j 1 ^blki 2 ^blkj 1)
+(<b32> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 5 ^j 2 ^blki 2 ^blkj 1)
+(<b33> ^value 7 ^i 5 ^j 3 ^blki 2 ^blkj 1)
+(<b34> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 6 ^j 1 ^blki 2 ^blkj 1)
+(<b35> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 6 ^j 2 ^blki 2 ^blkj 1)
+(<b36> ^value 5 ^i 6 ^j 3 ^blki 2 ^blkj 1)
+(<b37> ^value 3 ^i 4 ^j 4 ^blki 2 ^blkj 2)
+(<b38> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 4 ^j 5 ^blki 2 ^blkj 2)
+(<b39> ^value 6 ^i 4 ^j 6 ^blki 2 ^blkj 2)
+(<b40> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 5 ^j 4 ^blki 2 ^blkj 2)
+(<b41> ^value 2 ^i 5 ^j 5 ^blki 2 ^blkj 2)
+(<b42> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 5 ^j 6 ^blki 2 ^blkj 2)
+(<b43> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 6 ^j 4 ^blki 2 ^blkj 2)
+(<b44> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 6 ^j 5 ^blki 2 ^blkj 2)
+(<b45> ^value 1 ^i 6 ^j 6 ^blki 2 ^blkj 2)
+(<b46> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 4 ^j 7 ^blki 2 ^blkj 3)
+(<b47> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 4 ^j 8 ^blki 2 ^blkj 3)
+(<b48> ^value 5 ^i 4 ^j 9 ^blki 2 ^blkj 3)
+(<b49> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 5 ^j 7 ^blki 2 ^blkj 3)
+(<b50> ^value 4 ^i 5 ^j 8 ^blki 2 ^blkj 3)
+(<b51> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 5 ^j 9 ^blki 2 ^blkj 3)
+(<b52> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 6 ^j 7 ^blki 2 ^blkj 3)
+(<b53> ^value 7 ^i 6 ^j 8 ^blki 2 ^blkj 3)
+(<b54> ^value 3 ^i 6 ^j 9 ^blki 2 ^blkj 3)
+(<b55> ^value 1 ^i 7 ^j 1 ^blki 3 ^blkj 1)
+(<b56> ^value 4 ^i 7 ^j 2 ^blki 3 ^blkj 1)
+(<b57> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 7 ^j 3 ^blki 3 ^blkj 1)
+(<b58> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 8 ^j 1 ^blki 3 ^blkj 1)
+(<b59> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 8 ^j 2 ^blki 3 ^blkj 1)
+(<b60> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 8 ^j 3 ^blki 3 ^blkj 1)
+(<b61> ^value 5 ^i 9 ^j 1 ^blki 3 ^blkj 1)
+(<b62> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 9 ^j 2 ^blki 3 ^blkj 1)
+(<b63> ^value 2 ^i 9 ^j 3 ^blki 3 ^blkj 1)
+(<b64> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 7 ^j 4 ^blki 3 ^blkj 2)
+(<b65> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 7 ^j 5 ^blki 3 ^blkj 2)
+(<b66> ^value 2 ^i 7 ^j 6 ^blki 3 ^blkj 2)
+(<b67> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 8 ^j 4 ^blki 3 ^blkj 2)
+(<b68> ^value 9 ^i 8 ^j 5 ^blki 3 ^blkj 2)
+(<b69> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 8 ^j 6 ^blki 3 ^blkj 2)
+(<b70> ^value 6 ^i 9 ^j 4 ^blki 3 ^blkj 2)
+(<b71> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 9 ^j 5 ^blki 3 ^blkj 2)
+(<b72> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 9 ^j 6 ^blki 3 ^blkj 2)
+(<b73> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 7 ^j 7 ^blki 3 ^blkj 3)
+(<b74> ^value 9 ^i 7 ^j 8 ^blki 3 ^blkj 3)
+(<b75> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 7 ^j 9 ^blki 3 ^blkj 3)
+(<b76> ^value 8 ^i 8 ^j 7 ^blki 3 ^blkj 3)
+(<b77> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 8 ^j 8 ^blki 3 ^blkj 3)
+(<b78> ^value 2 ^i 8 ^j 9 ^blki 3 ^blkj 3)
+(<b79> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 9 ^j 7 ^blki 3 ^blkj 3)
+(<b80> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 9 ^j 8 ^blki 3 ^blkj 3)
+(<b81> ^value 0 ^possible 1 2 3 4 5 6 7 8 9 ^pcount 9 ^i 9 ^j 9 ^blki 3 ^blkj 3)
+
+}

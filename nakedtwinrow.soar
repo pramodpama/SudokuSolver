@@ -1,0 +1,45 @@
+#  cell is empty in a row
+sp {sudoku*propose*nakedtwinrow
+   (state <s> ^name sudoku)
+
+   (<s> ^box <b>)
+   (<b> ^value 0)
+   (<b> ^i <i>)
+   (<b> ^pcount 2)
+   (<b> ^possible <n1>)
+   (<b> ^possible {<n2> <> <n1>})
+  
+   (<s> ^box {<b2> <> <b>} )
+   (<b2> ^value 0)
+   (<b2> ^pcount 2)
+   (<b2> ^i <i> )
+   (<b2> ^possible <n1>)
+   (<b2> ^possible {<n2> <> <n1>})
+
+   (<b> ^possible <n>)
+
+   (<s> ^box {<b3> <> <b>} )
+   (<s> ^box {<b3> <> <b2>} )
+   (<b3> ^value 0)
+   (<b3> ^i <i> )
+   (<b3> ^possible <n>)
+   (<b3> ^pcount <p>)
+
+-->
+   (<s> ^operator <op> + =)
+   (<op> ^name nakedtwinrow)
+   (<op> ^box1 <b3> ^possible1 <n> ^pcount1 <p>)
+}
+
+
+sp {apply*nakedtwinrow
+   (state <s> ^operator <op> ^box <b>)
+   (<op> ^name nakedtwinrow)
+   (<op> ^box1 <b> ^possible1 <n> ^pcount1 <p>)
+-->
+   
+   (<b> ^possible <n> - )
+   (<b> ^pcount <p> -)
+   (<b> ^pcount (- <p> 1))
+
+}

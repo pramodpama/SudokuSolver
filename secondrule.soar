@@ -1,0 +1,30 @@
+# cell is empty in a column
+# basically removing all other possible values
+sp {sudoku*propose*secondrule
+   (state <s> ^name sudoku ^box <b>)
+   (<b> ^value 0)
+
+   (<b> ^j <j>)
+   (<b> ^pcount > 1) # corrct
+   (<b> ^pcount <p>) # corrct
+   (<b> ^possible <n>)
+   (<s> ^box {<b2> <> <b>} )
+   (<b2> ^j <j> )
+   (<b2> ^value <n>)
+               
+-->
+   (<s> ^operator <op> + > =)
+   (<op> ^name secondrule)
+   (<op> ^box1 <b> ^possible1 <n> ^pcount1 <p>)
+}
+
+
+sp {apply*secondrule
+   (state <s> ^operator <op> ^box <b>)
+   (<op> ^name secondrule)
+   (<op> ^box1 <b> ^possible1 <n> ^pcount1 <p>)
+-->
+   (<b> ^possible <n> - )
+   (<b> ^pcount <p> -)
+   (<b> ^pcount (- <p> 1))
+}

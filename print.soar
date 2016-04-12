@@ -1,0 +1,447 @@
+
+sp {sudoku*propose*print
+	(state <s> ^name sudoku)
+	(<s> -^box.value 0)
+	#(<s> ^flag 1)
+-->
+	(<s> ^operator <o> + =)
+	(<o> ^name print)  #anything else ?
+}
+
+sp {sudoku*apply*print
+	(state <s> ^name sudoku ^operator <o> )
+	(<o> ^name print)
+
+	(<s> ^box <b1>)
+	(<b1> ^i 1 ^j 1)
+	(<b1> ^value <v1>)
+
+	(<s> ^box <b2>)
+	(<b2> ^i 1 ^j 2)
+	(<b2> ^value <v2>)
+
+	(<s> ^box <b3>)
+	(<b3> ^i 1 ^j 3)
+	(<b3> ^value <v3>)
+
+	(<s> ^box <b4>)
+	(<b4> ^i 1 ^j 4)
+	(<b4> ^value <v4>)
+
+	(<s> ^box <b5>)
+	(<b5> ^i 1 ^j 5)
+	(<b5> ^value <v5>)
+
+	(<s> ^box <b6>)
+	(<b6> ^i 1 ^j 6)
+	(<b6> ^value <v6>)
+
+	(<s> ^box <b7>)
+	(<b7> ^i 1 ^j 7)
+	(<b7> ^value <v7>)
+
+	(<s> ^box <b8>)
+	(<b8> ^i 1 ^j 8)
+	(<b8> ^value <v8>)
+
+	(<s> ^box <b9>)
+	(<b9> ^i 1 ^j 9)
+	(<b9> ^value <v9>)
+
+	(<s> ^box <b10>)
+	(<b10> ^i 2 ^j 1)
+	(<b10> ^value <v10>)
+
+	(<s> ^box <b11>)
+	(<b11> ^i 2 ^j 2)
+	(<b11> ^value <v11>)
+
+	(<s> ^box <b12>)
+	(<b12> ^i 2 ^j 3)
+	(<b12> ^value <v12>)
+
+	(<s> ^box <b13>)
+	(<b13> ^i 2 ^j 4)
+	(<b13> ^value <v13>)
+
+	(<s> ^box <b14>)
+	(<b14> ^i 2 ^j 5)
+	(<b14> ^value <v14>)
+
+	(<s> ^box <b15>)
+	(<b15> ^i 2 ^j 6)
+	(<b15> ^value <v15>)
+
+	(<s> ^box <b16>)
+	(<b16> ^i 2 ^j 7)
+	(<b16> ^value <v16>)
+
+	(<s> ^box <b17>)
+	(<b17> ^i 2 ^j 8)
+	(<b17> ^value <v17>)
+
+	(<s> ^box <b18>)
+	(<b18> ^i 2 ^j 9)
+	(<b18> ^value <v18>)
+
+	(<s> ^box <b19>)
+	(<b19> ^i 3 ^j 1)
+	(<b19> ^value <v19>)
+
+	(<s> ^box <b20>)
+	(<b20> ^i 3 ^j 2)
+	(<b20> ^value <v20>)
+
+	(<s> ^box <b21>)
+	(<b21> ^i 3 ^j 3)
+	(<b21> ^value <v21>)
+
+	(<s> ^box <b22>)
+	(<b22> ^i 3 ^j 4)
+	(<b22> ^value <v22>)
+
+	(<s> ^box <b23>)
+	(<b23> ^i 3 ^j 5)
+	(<b23> ^value <v23>)
+
+	(<s> ^box <b24>)
+	(<b24> ^i 3 ^j 6)
+	(<b24> ^value <v24>)
+
+	(<s> ^box <b25>)
+	(<b25> ^i 3 ^j 7)
+	(<b25> ^value <v25>)
+
+	(<s> ^box <b26>)
+	(<b26> ^i 3 ^j 8)
+	(<b26> ^value <v26>)
+
+	(<s> ^box <b27>)
+	(<b27> ^i 3 ^j 9)
+	(<b27> ^value <v27>)
+
+	(<s> ^box <b28>)
+	(<b28> ^i 4 ^j 1)
+	(<b28> ^value <v28>)
+
+	(<s> ^box <b29>)
+	(<b29> ^i 4 ^j 2)
+	(<b29> ^value <v29>)
+
+	(<s> ^box <b30>)
+	(<b30> ^i 4 ^j 3)
+	(<b30> ^value <v30>)
+
+	(<s> ^box <b31>)
+	(<b31> ^i 4 ^j 4)
+	(<b31> ^value <v31>)
+
+	(<s> ^box <b32>)
+	(<b32> ^i 4 ^j 5)
+	(<b32> ^value <v32>)
+
+	(<s> ^box <b33>)
+	(<b33> ^i 4 ^j 6)
+	(<b33> ^value <v33>)
+
+	(<s> ^box <b34>)
+	(<b34> ^i 4 ^j 7)
+	(<b34> ^value <v34>)
+
+	(<s> ^box <b35>)
+	(<b35> ^i 4 ^j 8)
+	(<b35> ^value <v35>)
+
+	(<s> ^box <b36>)
+	(<b36> ^i 4 ^j 9)
+	(<b36> ^value <v36>)
+
+	(<s> ^box <b37>)
+	(<b37> ^i 5 ^j 1)
+	(<b37> ^value <v37>)
+
+	(<s> ^box <b38>)
+	(<b38> ^i 5 ^j 2)
+	(<b38> ^value <v38>)
+
+	(<s> ^box <b39>)
+	(<b39> ^i 5 ^j 3)
+	(<b39> ^value <v39>)
+
+	(<s> ^box <b40>)
+	(<b40> ^i 5 ^j 4)
+	(<b40> ^value <v40>)
+
+	(<s> ^box <b41>)
+	(<b41> ^i 5 ^j 5)
+	(<b41> ^value <v41>)
+
+	(<s> ^box <b42>)
+	(<b42> ^i 5 ^j 6)
+	(<b42> ^value <v42>)
+
+	(<s> ^box <b43>)
+	(<b43> ^i 5 ^j 7)
+	(<b43> ^value <v43>)
+
+	(<s> ^box <b44>)
+	(<b44> ^i 5 ^j 8)
+	(<b44> ^value <v44>)
+
+	(<s> ^box <b45>)
+	(<b45> ^i 5 ^j 9)
+	(<b45> ^value <v45>)
+
+	(<s> ^box <b46>)
+	(<b46> ^i 6 ^j 1)
+	(<b46> ^value <v46>)
+
+	(<s> ^box <b47>)
+	(<b47> ^i 6 ^j 2)
+	(<b47> ^value <v47>)
+
+	(<s> ^box <b48>)
+	(<b48> ^i 6 ^j 3)
+	(<b48> ^value <v48>)
+
+	(<s> ^box <b49>)
+	(<b49> ^i 6 ^j 4)
+	(<b49> ^value <v49>)
+
+	(<s> ^box <b50>)
+	(<b50> ^i 6 ^j 5)
+	(<b50> ^value <v50>)
+
+	(<s> ^box <b51>)
+	(<b51> ^i 6 ^j 6)
+	(<b51> ^value <v51>)
+
+	(<s> ^box <b52>)
+	(<b52> ^i 6 ^j 7)
+	(<b52> ^value <v52>)
+
+	(<s> ^box <b53>)
+	(<b53> ^i 6 ^j 8)
+	(<b53> ^value <v53>)
+
+	(<s> ^box <b54>)
+	(<b54> ^i 6 ^j 9)
+	(<b54> ^value <v54>)
+
+	(<s> ^box <b55>)
+	(<b55> ^i 7 ^j 1)
+	(<b55> ^value <v55>)
+
+	(<s> ^box <b56>)
+	(<b56> ^i 7 ^j 2)
+	(<b56> ^value <v56>)
+
+	(<s> ^box <b57>)
+	(<b57> ^i 7 ^j 3)
+	(<b57> ^value <v57>)
+
+	(<s> ^box <b58>)
+	(<b58> ^i 7 ^j 4)
+	(<b58> ^value <v58>)
+
+	(<s> ^box <b59>)
+	(<b59> ^i 7 ^j 5)
+	(<b59> ^value <v59>)
+
+	(<s> ^box <b60>)
+	(<b60> ^i 7 ^j 6)
+	(<b60> ^value <v60>)
+
+	(<s> ^box <b61>)
+	(<b61> ^i 7 ^j 7)
+	(<b61> ^value <v61>)
+
+	(<s> ^box <b62>)
+	(<b62> ^i 7 ^j 8)
+	(<b62> ^value <v62>)
+
+	(<s> ^box <b63>)
+	(<b63> ^i 7 ^j 9)
+	(<b63> ^value <v63>)
+
+	(<s> ^box <b64>)
+	(<b64> ^i 8 ^j 1)
+	(<b64> ^value <v64>)
+
+	(<s> ^box <b65>)
+	(<b65> ^i 8 ^j 2)
+	(<b65> ^value <v65>)
+
+	(<s> ^box <b66>)
+	(<b66> ^i 8 ^j 3)
+	(<b66> ^value <v66>)
+
+	(<s> ^box <b67>)
+	(<b67> ^i 8 ^j 4)
+	(<b67> ^value <v67>)
+
+	(<s> ^box <b68>)
+	(<b68> ^i 8 ^j 5)
+	(<b68> ^value <v68>)
+
+	(<s> ^box <b69>)
+	(<b69> ^i 8 ^j 6)
+	(<b69> ^value <v69>)
+
+	(<s> ^box <b70>)
+	(<b70> ^i 8 ^j 7)
+	(<b70> ^value <v70>)
+
+	(<s> ^box <b71>)
+	(<b71> ^i 8 ^j 8)
+	(<b71> ^value <v71>)
+
+	(<s> ^box <b72>)
+	(<b72> ^i 8 ^j 9)
+	(<b72> ^value <v72>)
+
+	(<s> ^box <b73>)
+	(<b73> ^i 9 ^j 1)
+	(<b73> ^value <v73>)
+
+	(<s> ^box <b74>)
+	(<b74> ^i 9 ^j 2)
+	(<b74> ^value <v74>)
+
+	(<s> ^box <b75>)
+	(<b75> ^i 9 ^j 3)
+	(<b75> ^value <v75>)
+
+	(<s> ^box <b76>)
+	(<b76> ^i 9 ^j 4)
+	(<b76> ^value <v76>)
+
+	(<s> ^box <b77>)
+	(<b77> ^i 9 ^j 5)
+	(<b77> ^value <v77>)
+
+	(<s> ^box <b78>)
+	(<b78> ^i 9 ^j 6)
+	(<b78> ^value <v78>)
+
+	(<s> ^box <b79>)
+	(<b79> ^i 9 ^j 7)
+	(<b79> ^value <v79>)
+
+	(<s> ^box <b80>)
+	(<b80> ^i 9 ^j 8)
+	(<b80> ^value <v80>)
+
+	(<s> ^box <b81>)
+	(<b81> ^i 9 ^j 9)
+	(<b81> ^value <v81>)
+
+-->
+	#(<s> ^flag 1 -)
+	#(<s> ^flag 0)	
+    (write (crlf) <v1> )
+    (write | | <v2> )
+    (write | | <v3> )
+    (write | | <v4> )
+    (write | | <v5> )
+    (write | | <v6> )
+    (write | | <v7> )
+    (write | | <v8> )
+    (write | | <v9> )
+   	(write (crlf) )
+
+   	(write <v10> )
+   	(write | |<v11> )
+    (write | | <v12> )
+    (write | | <v13> )
+    (write | | <v14> )
+    (write | | <v15> )
+    (write | | <v16> )
+    (write | | <v17> )
+    (write | | <v18> )
+   	(write (crlf) )
+
+   	(write <v19> )
+   	(write | |<v20> )
+    (write | | <v21> )
+    (write | | <v22> )
+    (write | | <v23> )
+    (write | | <v24> )
+    (write | | <v25> )
+    (write | | <v26> )
+    (write | | <v27> )
+   	(write (crlf) )
+
+   	(write <v28> )
+   	(write | |<v29> )
+    (write | | <v30> )
+    (write | | <v31> )
+    (write | | <v32> )
+    (write | | <v33> )
+    (write | | <v34> )
+    (write | | <v35> )
+    (write | | <v36> )
+   	(write (crlf) )
+
+   	(write <v37> )
+   	(write | |<v38> )
+    (write | | <v39> )
+    (write | | <v40> )
+    (write | | <v41> )
+    (write | | <v42> )
+    (write | | <v43> )
+    (write | | <v44> )
+    (write | | <v45> )
+   	(write (crlf) )
+
+   	(write <v46> )
+   	(write | |<v47> )
+    (write | | <v48> )
+    (write | | <v49> )
+    (write | | <v50> )
+    (write | | <v51> )
+    (write | | <v52> )
+    (write | | <v53> )
+    (write | | <v54> )
+   	(write (crlf) )
+
+   
+   	(write <v55> )
+    (write | | <v56> )
+    (write | | <v57> )
+    (write | | <v58> )
+    (write | | <v59> )
+    (write | | <v60> )
+    (write | | <v61> )
+    (write | | <v62> )
+    (write | | <v63> )
+
+   	(write (crlf) )
+
+   	(write <v64> )
+   	(write | |<v65> )
+    (write | | <v66> )
+    (write | | <v67> )
+    (write | | <v68> )
+    (write | | <v69> )
+    (write | | <v70> )
+    (write | | <v71> )
+    (write | | <v72> )
+   	(write (crlf) )
+
+   	(write <v73> )
+   	(write | |<v74> )
+    (write | | <v75> )
+    (write | | <v76> )
+    (write | | <v77> )
+    (write | | <v78> )
+    (write | | <v79> )
+    (write | | <v80> )
+    (write | | <v81> )
+   	(write (crlf) )
+
+
+
+   	(halt)
+}
+

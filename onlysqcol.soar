@@ -1,0 +1,35 @@
+#  hidden single column
+sp {sudoku*propose*onlysqcol
+   (state <s> ^name sudoku)
+
+   (<s> ^box <b>)
+   (<b> ^value 0)
+   (<b> ^j <j>)
+   (<b> ^pcount > 1)
+   (<b> ^pcount <p>)
+   (<b> ^possible <n>)
+   
+   -{   (<s> ^box {<b2> <> <b>} )
+   (<b2> ^value 0)
+   #(<b2> ^pcount > 1)
+   (<b2> ^j <j> )
+   (<b2> ^possible <n>)}
+-->
+   (<s> ^operator <op> + =)
+   (<op> ^name onlysqcol)
+   (<op> ^box1 <b> ^possible1 <n> ^pcount1 <p>)
+}
+
+
+sp {apply*onlysqcol
+   (state <s> ^operator <op> ^box <b>)
+   (<op> ^name onlysqcol)
+   (<op> ^box1 <b> ^possible1 <n> ^pcount1 <p>)
+-->
+   (<b> ^value 0 -)
+   (<b> ^value <n>)
+   (<b> ^pcount <p> -)
+   (<b> ^pcount 0)
+   # (<b> ^pcount 0)
+
+}

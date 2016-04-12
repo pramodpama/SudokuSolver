@@ -1,0 +1,24 @@
+sp {sudoku*propose*insert
+   (state <s> ^name sudoku ^box <b>)
+   (<b> ^value 0)
+   (<b> ^pcount 1)
+   (<b> ^i <i>)
+   (<b> ^j <j>)
+   (<b> ^pcount <p>)
+   (<b> ^possible <n>)
+-->
+   (<s> ^operator <op> + =)
+   (<op> ^name insert)
+   (<op> ^box1 <b> ^possible1 <n> ^pcount1 <p> ^row <i> ^col <j>)
+}
+
+sp {apply*insert
+   (state <s> ^operator <op> ^box <b>)
+   (<op> ^name insert ^box1 <b> ^possible1 <n> ^pcount1 <p> ^row <i> ^col <j>)
+-->
+   (write (crlf) |   inserted | <n> | at (| <i> |,| <j> |)| )
+   (<b> ^value 0 -)
+   (<b> ^value <n>)
+   (<b> ^pcount <p> -)
+   (<b> ^pcount (- <p> 1))
+}

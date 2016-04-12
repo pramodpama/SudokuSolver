@@ -1,0 +1,32 @@
+# cell is empty in a block
+# basically removing all other possible values except corrct one
+sp {sudoku*propose*thirdrule
+   (state <s> ^name sudoku ^box <b>)
+   (<b> ^value 0)
+
+   (<b> ^blki <bi>)
+   (<b> ^blkj <bj>)
+   (<b> ^pcount > 1) # corrct
+   (<b> ^pcount <p>) # corrct
+   (<b> ^possible <n>)
+   (<s> ^box {<b2> <> <b>} )
+   (<b2> ^blki <bi> )
+   (<b2> ^blkj <bj> )
+   (<b2> ^value <n>)
+               
+-->
+   (<s> ^operator <op> + > =)
+   (<op> ^name thirdrule)
+   (<op> ^box1 <b> ^possible1 <n> ^pcount1 <p>)
+}
+
+
+sp {apply*thirdrule
+   (state <s> ^operator <op> ^box <b>)
+   (<op> ^name thirdrule)
+   (<op> ^box1 <b> ^possible1 <n> ^pcount1 <p>)
+-->
+   (<b> ^possible <n> - )
+   (<b> ^pcount <p> -)
+   (<b> ^pcount (- <p> 1))
+}

@@ -1,0 +1,43 @@
+#  hidden single row
+sp {sudoku*propose*onlysqrow
+   (state <s> ^name sudoku)
+
+   (<s> ^box <b>)
+   (<b> ^value 0)
+   (<b> ^i <i>)
+   (<b> ^j <j> )
+   (<b> ^blki <bi>)
+   (<b> ^blkj <bj>)   
+   (<b> ^pcount > 1)
+   (<b> ^pcount <p>)
+   (<b> ^possible <n>)
+   #(<b> ^possible {<m> <> <n> })
+   
+   -{(<s> ^box {<b2> <> <b> } )
+   (<b2> ^value 0)
+#   (<b2> ^pcount > 1)
+   (<b2> ^i <i> )
+   (<b2> ^possible <n>)}
+
+
+-->
+   (<s> ^operator <op> + =)
+   (<op> ^name onlysqrow)
+   (<op> ^box1 <b> ^possible1 <n> ^pcount1 <p>)
+   #(write (crlf) |hidden single|)
+}
+
+
+sp {apply*onlysqrow
+   (state <s> ^operator <op> ^box <b>)
+   (<op> ^name onlysqrow)
+   (<op> ^box1 <b> ^possible1 <n> ^pcount1 <p>)
+-->
+   (<b> ^value 0 -)
+   (<b> ^value <n>)
+   #(<b> ^possible <m> -)
+   (<b> ^pcount <p> -)
+   #(<b> ^pcount (- <p> 1))
+   (<b> ^pcount 0)
+
+}
